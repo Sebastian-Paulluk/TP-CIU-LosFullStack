@@ -1,11 +1,11 @@
-import './App.css'
-import { FabricantesContainer } from './Components/FabricantesContainer/FabricantesContainer'
+import './App.scss'
+import { Header } from './Components/Header/Header'
 
 function App() {
 
   return (
     <>
-      <FabricantesContainer />
+      <Header />
     </>
   )
 }

@@ -1,0 +1,9 @@
+@use './scss/resets';
+@use './scss/variables';
+
+:root {
+  background-color: variables.$background-color;
+  color: variables.$text-color;
+
+  font-family: variables.$font-family;
+}

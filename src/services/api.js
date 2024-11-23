@@ -1,17 +1,17 @@
-
-export const getFabricantes = async() => {
+const fetchData = async (url) => {
     try {
-        const response = await fetch('http://localhost:4000/fabricantes');
-        
+        const response = await fetch(url);
         if (!response.ok) {
-            throw new Error('Red no responde correctamente');
+            throw new Error(`Error en la red: ${response.status} ${response.statusText}`);
         }
-        
-        const data = await response.json(); 
-
-        return data;
+        return await response.json();
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error en la solicitud:', error);
+        throw error;
     }
-    return [];
-}
+};
+
+
+export const getFabricantes = async () => {
+    return await fetchData('http://localhost:4000/fabricantes');
+};
