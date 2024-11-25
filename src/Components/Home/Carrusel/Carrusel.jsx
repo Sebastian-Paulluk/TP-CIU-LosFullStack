@@ -1,4 +1,3 @@
-import React from 'react';
 import { Carousel, Tooltip, OverlayTrigger } from 'react-bootstrap';
 
 

@@ -6,6 +6,7 @@ import { FabricantesContainer } from './Components/FabricantesComponents/Fabrica
 import { Header } from './Components/Header/Header'
 import { Home } from './Components/Home/Home'
 import Footer from './Components/Footer/Footer'
+import { Detalles } from './Components/Detalles/Detalles'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/fabricantes' element={<FabricantesContainer />}/>
           <Route path='/productos' element={<ProductosContainer />}/>
           <Route path='/componentes' element={<ComponentesContainer />}/>
+          <Route path='/detalles' element={<Detalles />} />
         </Routes>
         <Footer />
       </BrowserRouter>

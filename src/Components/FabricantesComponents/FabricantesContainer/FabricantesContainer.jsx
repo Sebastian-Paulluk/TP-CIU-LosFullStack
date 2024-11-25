@@ -20,7 +20,7 @@ export const FabricantesContainer =()=> {
             <h3 className='fabricantes-section__title'>Fabricantes</h3>
             <div className='fabricantes-section__cards'>
                 {fabricantes?.map((fab) => (
-                        <FabricanteCard key={fab.id} fabricante={fab} />
+                        <FabricanteCard key={fab._id} fabricante={fab} />
                 ))}
             </div>
         </div>
