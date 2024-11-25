@@ -25,5 +25,3 @@ export const ProductosContainer =()=> {
         </div>
     );
 };
-
-//ACOMODAR TODO PARA PRODUCTO

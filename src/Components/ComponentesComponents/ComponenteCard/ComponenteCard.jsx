@@ -1,4 +1,5 @@
 import './ComponenteCard.scss';
+import PropTypes from 'prop-types';
 
 export const ComponenteCard =({componente})=> {
 
@@ -8,3 +9,8 @@ export const ComponenteCard =({componente})=> {
        </div>
     )
 }
+ComponenteCard.propTypes = {
+  componente: PropTypes.shape({
+    nombre: PropTypes.string.isRequired,
+  }).isRequired,
+};
