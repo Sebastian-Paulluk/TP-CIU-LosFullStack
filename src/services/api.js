@@ -19,5 +19,9 @@ export const getFabricantes = async () => {
 
 
 export const getComponentes = async () => {
+    return await fetchData('http://localhost:4000/componentes');
+};
+
+export const getProductos = async () => {
     return await fetchData('http://localhost:4000/productos');
 };

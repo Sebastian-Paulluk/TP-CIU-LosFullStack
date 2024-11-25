@@ -1,12 +1,16 @@
-import './ComponenteCard.scss';
+import './ProductoCard.scss';
+import PropTypes from 'prop-types';
 
-export const ComponenteCard =({componente})=> {
+export const ProductoCard =({producto})=> {
 
     return (
-       <div className='componente-card'>
-            {componente.nombre}
+       <div className='productos-card'>
+            {producto.nombre}
        </div>
     )
 }
-
-//ACOMODAR TODO PARA PRODUCTO
+ProductoCard.propTypes = {
+    producto: PropTypes.shape({
+        nombre: PropTypes.string.isRequired,
+    }).isRequired,
+};

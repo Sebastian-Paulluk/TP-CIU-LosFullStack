@@ -1,0 +1,11 @@
+@use '../../../scss/variables';
+
+.productos-section {
+    border: 1px solid rgb(145, 145, 145);
+
+    &__cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

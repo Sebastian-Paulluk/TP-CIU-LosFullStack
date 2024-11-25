@@ -1,26 +1,25 @@
-import './ComponentesContainer.scss'
-import { useEffect, useState } from "react"
-import { getComponentes } from "../../../services/api"
-import { ComponenteCard } from '../ComponenteCard/ComponenteCard';
+import { useEffect, useState } from "react";
+import { getProductos } from "../../../services/api";
+import { ProductoCard } from '../ProductoCard/ProductoCard';
 
-export const ComponentesContainer =()=> {
-    const [componentes , setComponentes] = useState([]);
+export const ProductosContainer =()=> {
+    const [productos , setProductos] = useState([]);
 
     useEffect(()=>{
         try {
-            getComponentes()
-                .then(res => setComponentes(res));
+            getProductos()
+                .then(res => setProductos(res));
         } catch (error) {
-            console.error("Error obteniendo componentes:", error);
+            console.error("Error obteniendo productos:", error);
         }
     },[]);
     
     return (
-        <div className="componentes-section">
-            <h3 className='componentes-section__title'>Componentes</h3>
-            <div className='componentes-section__cards'>
-                {componentes?.map((com) => (
-                        <ComponenteCard key={com.id} componente={com} />
+        <div className="productos-section">
+            <h3 className='productos-section__title'>Productos</h3>
+            <div className='productos-section__cards'>
+                {productos?.map((producto) => (
+                        <ProductoCard key={producto.id} producto={producto} />
                 ))}
             </div>
         </div>
