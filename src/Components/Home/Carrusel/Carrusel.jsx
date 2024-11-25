@@ -1,6 +1,5 @@
 import { Carousel, Tooltip, OverlayTrigger } from 'react-bootstrap';
 
-
 export default function Carrusel() {
 
     return (
