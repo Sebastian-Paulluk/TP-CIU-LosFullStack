@@ -12,7 +12,6 @@ export default function MenuHome() {
                 <Nav className="me-auto">
                     <Nav.Link as={Link} to="/">Historia</Nav.Link>
                     <Nav.Link as={Link} to="/">Local</Nav.Link>
-                    <Nav.Link as={Link} to="/">Marcas</Nav.Link>
                     <Nav.Link as={Link} to="/">Video</Nav.Link>
                     <Nav.Link as={Link} to="/">Contacto</Nav.Link>
                     <Nav.Link as={Link} to="/">Mapa</Nav.Link>

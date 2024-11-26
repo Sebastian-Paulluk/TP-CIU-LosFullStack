@@ -11,7 +11,6 @@ export const Header =()=> {
                 <Container>
                 <Navbar.Brand as={Link} to="/">TecnoMax</Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link as={Link} to="/componentes">Componentes</Nav.Link>
                     <Nav.Link as={Link} to="/productos">Productos</Nav.Link>
                     <Nav.Link as={Link} to="/fabricantes">Fabricantes</Nav.Link>
                 </Nav>

@@ -80,5 +80,5 @@ export default function Carrusel() {
                 </OverlayTrigger>
             </Carousel.Item>
         </Carousel>
-  );
+    );
 }
