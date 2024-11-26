@@ -11,6 +11,8 @@ const fetchData = async (url) => {
     }
 };
 
+
+
 export const getFabricantes = async () => {
     return await fetchData('http://localhost:4000/fabricantes');
 };
@@ -21,8 +23,12 @@ export const getProductos = async () => {
     return await fetchData('http://localhost:4000/productos');
 };
 
+export const getProducto = async (idProducto) => {
+    return await fetchData(`http://localhost:4000/productos/${idProducto}`);
+};
 
 
-export const getComponentes = async () => {
-    return await fetchData('http://localhost:4000/componentes');
+
+export const getComponentes = async (idProducto) => {
+    return await fetchData(`http://localhost:4000/productos/${idProducto}/componentes`);
 };

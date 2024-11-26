@@ -1,30 +1,40 @@
 import './ComponentesContainer.scss'
 import { useEffect, useState } from "react"
-import { getProductos } from "../../../services/api"
+import { getComponentes } from "../../../services/api"
+import { useParams } from 'react-router-dom';
 import { ComponenteCard } from '../ComponenteCard/ComponenteCard';
 
 export const ComponentesContainer =()=> {
-    const [productos , setComponentes] = useState([]);
+    const [componentes , setComponentes] = useState([]);
+    const [nombreProducto , setnombreProducto] = useState('');
+    const {id} = useParams();
 
     useEffect(()=>{
         try {
-            getProductos()
-                .then(res => setComponentes(res));
+            getComponentes(id)
+                .then(res => {
+                    setnombreProducto(res.nombre)
+                    setComponentes(res.componentes);
+                })
         } catch (error) {
             console.error("Error obteniendo componentes:", error);
         }
     },[]);
-    
+
     return (
-        <div className="componentes-section">
-            <h3 className='componentes-section-title'>Componentes</h3>
-            <div className='componentes-section-cards'>
-                {productos?.map((producto) => (
-                    producto.componentes.map((componente) => (
-                        <ComponenteCard key={componente._id} componente={componente} />
-                    ))
-                ))}
-            </div>
-        </div>
+        <>
+            {
+                componentes && (
+                    <div className="componentes-section">
+                        <h3 className='componentes-section-title'>Componentes de {nombreProducto}</h3>
+                        <div className='componentes-section-cards'>
+                            {componentes.map(com => (
+                                <ComponenteCard key={com._id} componente={com} />
+                            ))}
+                        </div>
+                    </div>
+                )
+            }
+        </>
     );
 };
