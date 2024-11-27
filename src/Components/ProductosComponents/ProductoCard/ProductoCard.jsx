@@ -8,7 +8,7 @@ export const ProductoCard = ({ producto }) => {
             <img className="card-img-top" src={producto.pathImg} alt="FotoProducto"></img>
             <div className="card-body">
                 <h5 className="card-title">{producto.nombre}</h5>
-                <p className="card-text">Precio: ${producto.precio}</p>
+                <p className="card-text">Precio: ${producto.precio.toLocaleString()}</p>
             </div>
         </Link>
     );
