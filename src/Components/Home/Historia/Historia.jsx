@@ -3,7 +3,7 @@ import React from 'react'
 export default function Historia() {
   return (
     <div className='historia'>
-        <h2>Quiénes Somos</h2>
+        <h2 id='historia'>Quiénes Somos</h2>
         <h3>Nuestra Historia</h3>
         <p>
           En el año 2018, en Buenos Aires, nació TecnoMax, una empresa familiar con la pasión por la tecnología y un sueño claro: ofrecer a los entusiastas 

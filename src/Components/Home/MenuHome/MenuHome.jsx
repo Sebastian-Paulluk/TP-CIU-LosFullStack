@@ -10,12 +10,9 @@ export default function MenuHome() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link as={Link} to="/">Historia</Nav.Link>
-                    <Nav.Link as={Link} to="/">Local</Nav.Link>
-                    <Nav.Link as={Link} to="/">Video</Nav.Link>
-                    <Nav.Link as={Link} to="/">Contacto</Nav.Link>
-                    <Nav.Link as={Link} to="/">Mapa</Nav.Link>
-                    <Nav.Link as={Link} to="/">Desarrolladores</Nav.Link>
+                    <Nav.Link as={Link} to="/">Nuestra historia</Nav.Link>
+                    <Nav.Link as={Link} to="/">Galeria TecnoMax</Nav.Link>
+                    <Nav.Link as={Link} to="/">Contactanos</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -96,7 +96,7 @@ export default function GaleriaDeFotos() {
      ];
       
     return (
-        <Gallery 
+        <Gallery id='galeria'
             images={images}
             enableImageSelection={false}
             onClick={(index) => {
