@@ -3,6 +3,7 @@ import './Detalles.scss';
 import { useEffect, useState } from 'react';
 import { getProducto } from '../../services/api';
 import { Button } from 'react-bootstrap';
+import { LoadingScreen } from '../LoadingScreen/LoadingScreen';
 
 export const Detalles = () => {
     const [producto, setProducto] = useState(null);
@@ -20,7 +21,7 @@ export const Detalles = () => {
     return (
         <>
             {
-                producto && (
+                producto ? (
                     <div className="detalles">
                         <img className="card-body-photo" src={producto.pathImg} alt="FotoProducto" />
                         <div className="card-body">
@@ -37,6 +38,8 @@ export const Detalles = () => {
                             <p className="card-text"><strong>Precio:</strong> ${producto.precio.toLocaleString()}</p>
                         </div>
                     </div>
+                ) : (
+                    <LoadingScreen />
                 )
             }
         </>

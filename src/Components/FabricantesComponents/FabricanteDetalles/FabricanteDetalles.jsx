@@ -6,26 +6,19 @@ import { BotonVolver } from '../BotonVolver/BotonVolver';
 import { LoadingScreen } from '../../LoadingScreen/LoadingScreen';
 
 export const FabricanteDetalles =()=> {
-    const [fabricante , setFabricante] = useState([]);
+    const [fabricante, setFabricante] = useState(null);
     const {id} = useParams();
     const location = useLocation();
     const {deProducto = false} = location.state || {};
-    const [fabricanteCargado , setFabricanteCargado] = useState(false);
 
     useEffect(() => {
         try {
             if (deProducto) {
                 getFabricanteDeProducto(id)
-                    .then(res => {
-                        setFabricante(res.fabricantes[0]);
-                        setFabricanteCargado(true);
-                    });
+                    .then(res => setFabricante(res.fabricantes[0]));
             } else {
                 getFabricante(id)
-                    .then(res => {
-                        setFabricante(res);
-                        setFabricanteCargado(true);
-                    });
+                    .then(res => setFabricante(res));
             }
         } catch (error) {
             console.error("Error obteniendo el fabricante:", error);
@@ -34,7 +27,7 @@ export const FabricanteDetalles =()=> {
 
     return (
         <>
-            {fabricanteCargado ? (
+            {fabricante ? (
                 <div className='fab-detalles-container'>
                     <div className='fab-detalles'>
 

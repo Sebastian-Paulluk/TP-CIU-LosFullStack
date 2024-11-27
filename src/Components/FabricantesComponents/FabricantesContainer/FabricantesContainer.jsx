@@ -6,15 +6,11 @@ import { LoadingScreen } from '../../LoadingScreen/LoadingScreen';
 
 export const FabricantesContainer =()=> {
     const [fabricantes , setFabricantes] = useState([]);
-    const [fabricantesCargados , setFabricantesCargados] = useState(false);
 
     useEffect(()=>{
         try {
             getFabricantes()
-                .then(res => {
-                    setFabricantes(res);
-                    setFabricantesCargados(true);
-                });
+                .then(res => setFabricantes(res));
         } catch (error) {
             console.error("Error obteniendo fabricantes:", error);
         }
@@ -23,7 +19,7 @@ export const FabricantesContainer =()=> {
     return (
         <div className="fabricantes-section">
             {
-                fabricantesCargados ? (
+                fabricantes.length > 0 ? (
                     <>
                         <h3 className='fabricantes-section__title'>Fabricantes</h3>
                         <div className='fabricantes-section__cards'>

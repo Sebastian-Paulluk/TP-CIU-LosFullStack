@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { getComponentes } from "../../../services/api"
 import { useParams } from 'react-router-dom';
 import { ComponenteCard } from '../ComponenteCard/ComponenteCard';
+import { LoadingScreen } from '../../LoadingScreen/LoadingScreen';
 
 export const ComponentesContainer =()=> {
     const [componentes , setComponentes] = useState([]);
@@ -24,7 +25,7 @@ export const ComponentesContainer =()=> {
     return (
         <>
             {
-                componentes && (
+                componentes.length > 0 ? (
                     <div className="componentes-section">
                         <h3 className='componentes-section-title'>Componentes de {nombreProducto}</h3>
                         <div className='componentes-section-cards'>
@@ -33,6 +34,8 @@ export const ComponentesContainer =()=> {
                             ))}
                         </div>
                     </div>
+                ) : (
+                    <LoadingScreen />
                 )
             }
         </>
