@@ -22,16 +22,14 @@ export const Detalles = () => {
             {
                 producto && (
                     <div className="detalles">
-                        <img className="card-img-top" src={producto.pathImg} alt="FotoProducto" />
+                        <img className="card-body-photo" src={producto.pathImg} alt="FotoProducto" />
                         <div className="card-body">
                             <h5 className="card-title">{producto.nombre}</h5>
                             <p className="card-text">{producto.descripcion}</p>
-
                             <Link to={`/productos/${id}/componentes`}>
                                 <Button>Componentes</Button>
                             </Link>
-                            
-                            <p className="card-text"><strong>Precio:</strong> ${producto.precio}</p>
+                            <p className="card-text"><strong>Precio:</strong> ${producto.precio.toLocaleString()}</p>
                         </div>
                     </div>
                 )
