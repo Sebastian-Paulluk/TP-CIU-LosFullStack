@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Container, Navbar, Nav, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Cart } from '../Cart/Cart'
-import './Header.scss';
 
 export const Header = ({ cart, removeFromCart, calculateTotal, total }) => {
   const [showCart, setShowCart] = useState(false);
