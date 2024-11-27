@@ -18,7 +18,12 @@ export const getFabricantes = async () => {
     return await fetchData('http://localhost:4000/fabricantes');
 };
 
-export const getFabricante = async (idProducto) => {
+export const getFabricante = async (idFabricante) => {
+    //return await fetchData(`https://tecnomax-api.onrender.com/fabricantes/${idFabricante}`);
+    return await fetchData(`http://localhost:4000/fabricantes/${idFabricante}`);
+};
+
+export const getFabricanteDeProducto = async (idProducto) => {
     //return await fetchData(`https://tecnomax-api.onrender.com/productos/${idProducto}/fabricantes`);
     return await fetchData(`http://localhost:4000/productos/${idProducto}/fabricantes`);
 };

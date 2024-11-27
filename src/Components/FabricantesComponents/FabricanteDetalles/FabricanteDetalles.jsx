@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './FabricanteDetalles.scss';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getFabricante } from '../../../services/api';
 
 export const FabricanteDetalles =()=> {
@@ -16,14 +16,43 @@ export const FabricanteDetalles =()=> {
         }
     }, []);
 
+    console.log(id)
+    console.log(fabricante)
+
     return (
         <>
             {fabricante && (
-                    <div className='fabricante-detalles'>
-                        <h3>{fabricante.nombre}</h3>
-                        <p>{fabricante.direccion}</p>
-                        <p>{fabricante.numeroContacto}</p>
-                        <p>{fabricante.pathImgPerfil}</p>
+                    <div className='fab-detalles-container'>
+                        <div className='fab-detalles'>
+
+                            <img
+                                src={fabricante.pathImgPerfil}
+                                alt='logo-fabricante'
+                                className='fab-detalles__logo'
+                            />
+                            <div className='fab-detalles__info'>
+                                <div className='fab-detalles__info__direccion'>
+                                    <p>Dirección:</p>
+                                    <p className='fab-direccion'>{fabricante.direccion}</p>
+                                </div>
+                                <div className='fab-detalles__info__contacto'>
+                                    <p>Contacto:</p>
+                                    <p className='fab-contacto'>{fabricante.numeroContacto}</p>
+                                </div>
+                            </div>
+
+                            <Link to={`/productos/${id}`}>
+                                <div className='fab-link-back-container'>
+                                    
+                                        <i className="bi bi-caret-left"></i>
+                                        <span className='fab-link-back__text'>
+                                            Volver
+                                        </span>
+
+                                </div>
+                            </Link>
+
+                        </div>
                     </div>
             )}
         </>

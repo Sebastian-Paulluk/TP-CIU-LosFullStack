@@ -1,4 +1,65 @@
-.fabricante-detalles {
-    border: 1px solid red;
+.fab-detalles-container {
     padding: 20px;
+
+    p {
+        margin: 0;
+    }
+    
+    .fab-detalles {
+        color: rgb(59, 59, 59);
+        width: 400px;
+        margin: auto;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 3px;
+        
+        &__logo{
+            width: 100%;
+            padding: 10px;
+        }
+
+        &__info {
+            margin-top: 10px;
+            border-top: 1px solid rgb(182, 182, 182);
+            padding: 15px 10px 10px 10px;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            &__direccion, &__contacto {
+                display: flex;
+                flex-direction: column;
+
+                .fab-direccion, .fab-contacto {
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .fab-link-back-container{
+            display: flex;
+            justify-content: center;
+            color: rgb(0, 26, 255);
+            width: fit-content;
+            padding: 3px 15px 3px 10px;
+            border-radius: 20px;
+            margin: auto;
+            margin-top: 50px;
+            transition: 
+                background-color 0.2s ease,
+                color 0.1s ease;
+
+            &:hover {
+                background-color: rgb(179, 179, 179);
+                color: white;
+            }
+        }
+
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
 }
