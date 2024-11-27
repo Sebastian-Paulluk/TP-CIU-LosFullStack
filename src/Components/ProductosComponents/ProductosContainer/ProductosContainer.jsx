@@ -10,7 +10,6 @@ export const ProductosContainer =()=> {
         try {
             getProductos()
                 .then(res => setProductos(res));
-            console.log(productos);
         } catch (error) {
             console.error("Error obteniendo productos:", error);
         }

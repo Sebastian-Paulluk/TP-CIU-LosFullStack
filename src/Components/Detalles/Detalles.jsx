@@ -26,9 +26,14 @@ export const Detalles = () => {
                         <div className="card-body">
                             <h5 className="card-title">{producto.nombre}</h5>
                             <p className="card-text">{producto.descripcion}</p>
-                            <Link to={`/productos/${id}/componentes`}>
-                                <Button>Componentes</Button>
-                            </Link>
+                            <div className='card-body__botones'>
+                                <Link to={`/productos/${id}/componentes`}>
+                                    <Button>Componentes</Button>
+                                </Link>
+                                <Link to={`/productos/${id}/fabricante`}>
+                                    <Button>Fabricante</Button>
+                                </Link>
+                            </div>
                             <p className="card-text"><strong>Precio:</strong> ${producto.precio.toLocaleString()}</p>
                         </div>
                     </div>

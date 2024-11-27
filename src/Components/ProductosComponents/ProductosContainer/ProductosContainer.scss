@@ -10,12 +10,7 @@
     }
 }
 .productos-section {
-    &__cards {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        animation: slideIn 0.5s ease-out;
-    }
+
     .productos-section-title {
         text-align: center;
         font-size: 2rem;
@@ -29,6 +24,7 @@
         max-width: 400px;
     }
     .productos-section-cards{
+        flex-wrap: wrap;
         display: flex;
         justify-content: center;
         animation: slideIn 0.5s ease-out;
