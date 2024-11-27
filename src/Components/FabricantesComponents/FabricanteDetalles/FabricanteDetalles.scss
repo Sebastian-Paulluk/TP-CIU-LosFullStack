@@ -1,20 +1,20 @@
 .fab-detalles-container {
     padding: 20px;
-
+    
     p {
         margin: 0;
     }
     
     .fab-detalles {
         color: rgb(59, 59, 59);
-        width: 400px;
+        max-width: 400px;
         margin: auto;
         margin-top: 20px;
         padding: 10px;
         border-radius: 3px;
-        
+
         &__logo{
-            width: 100%;
+            max-width: 100%;
             padding: 10px;
         }
 
@@ -38,7 +38,7 @@
         }
 
         .boton-volver-container {
-            margin-top: 50px;
+            margin-top: 30px;
             display: flex;
             justify-content: center;
             

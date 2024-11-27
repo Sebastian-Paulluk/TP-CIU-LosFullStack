@@ -1,10 +1,12 @@
 @use '../../../scss/variables';
 
 .fabricantes-section {
-    border: 1px solid red;
     padding: 20px;
 
     &__cards {
+        border: 1px solid red;
+        max-width: 1000px;
+        margin: auto;
         display: flex;
         justify-content: center;
         align-items: center;
