@@ -37,29 +37,15 @@
             }
         }
 
-        .fab-link-back-container{
+        .boton-volver-container {
+            margin-top: 50px;
             display: flex;
             justify-content: center;
-            color: rgb(0, 26, 255);
-            width: fit-content;
-            padding: 3px 15px 3px 10px;
-            border-radius: 20px;
-            margin: auto;
-            margin-top: 50px;
-            transition: 
-                background-color 0.2s ease,
-                color 0.1s ease;
-
-            &:hover {
-                background-color: rgb(179, 179, 179);
-                color: white;
+            
+            a {
+                text-decoration: none;
+                color: inherit;
             }
-        }
-
-        
-        a {
-            text-decoration: none;
-            color: inherit;
         }
     }
 }

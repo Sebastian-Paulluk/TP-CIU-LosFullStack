@@ -1,3 +1,7 @@
+const local = 'http://localhost:4000';
+const nube = 'https://tecnomax-api-production.up.railway.app';
+const fuenteActual = nube;
+
 const fetchData = async (url) => {
     try {
         const response = await fetch(url);
@@ -12,33 +16,26 @@ const fetchData = async (url) => {
 };
 
 
-
 export const getFabricantes = async () => {
-    //return await fetchData('https://tecnomax-api.onrender.com/fabricantes');
-    return await fetchData('http://localhost:4000/fabricantes');
+    return await fetchData(`${fuenteActual}/fabricantes`);
 };
 
 export const getFabricante = async (idFabricante) => {
-    //return await fetchData(`https://tecnomax-api.onrender.com/fabricantes/${idFabricante}`);
-    return await fetchData(`http://localhost:4000/fabricantes/${idFabricante}`);
+    return await fetchData(`${fuenteActual}/fabricantes/${idFabricante}`);
 };
 
 export const getFabricanteDeProducto = async (idProducto) => {
-    //return await fetchData(`https://tecnomax-api.onrender.com/productos/${idProducto}/fabricantes`);
-    return await fetchData(`http://localhost:4000/productos/${idProducto}/fabricantes`);
+    return await fetchData(`${fuenteActual}/productos/${idProducto}/fabricantes`);
 };
 
 export const getProductos = async () => {
-    //return await fetchData('https://tecnomax-api.onrender.com/productos');
-    return await fetchData('http://localhost:4000/productos');
+    return await fetchData(`${fuenteActual}/productos`);
 };
 
 export const getProducto = async (idProducto) => {
-    //return await fetchData(`https://tecnomax-api.onrender.com/productos/${idProducto}`);
-    return await fetchData(`http://localhost:4000/productos/${idProducto}`);
+    return await fetchData(`${fuenteActual}/productos/${idProducto}`);
 };
 
 export const getComponentes = async (idProducto) => {
-    //return await fetchData(`https://tecnomax-api.onrender.com/productos/${idProducto}/componentes`);
-    return await fetchData(`http://localhost:4000/productos/${idProducto}/componentes`);
+    return await fetchData(`${fuenteActual}/productos/${idProducto}/componentes`);
 };

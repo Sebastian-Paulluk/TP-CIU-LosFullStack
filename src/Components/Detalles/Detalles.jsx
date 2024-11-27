@@ -30,7 +30,7 @@ export const Detalles = () => {
                                 <Link to={`/productos/${id}/componentes`}>
                                     <Button>Componentes</Button>
                                 </Link>
-                                <Link to={`/productos/${id}/fabricante`}>
+                                <Link to={`/productos/${id}/fabricante`} state={{deProducto: true}}>
                                     <Button>Fabricante</Button>
                                 </Link>
                             </div>
