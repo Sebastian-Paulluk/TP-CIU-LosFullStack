@@ -15,6 +15,7 @@ export const ProductoCard = ({ producto }) => {
                 <h5 className="card-title">{producto.nombre}</h5>
                 <p className="card-text">{producto.descripcion}</p>
                 <p className="card-text">Precio: ${producto.precio}</p>
+                <button className="btn btn-secondary" onClick={() => addToCart(producto)}>Agregar al Carrito</button>
             </div>
         </div>
     );

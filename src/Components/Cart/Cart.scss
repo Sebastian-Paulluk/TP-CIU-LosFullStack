@@ -1,0 +1,27 @@
+.custom-modal-width .modal-dialog {
+    max-width: 80%;
+  }
+  
+  .cart-items-container {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .card img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .card-body {
+    flex: 1;
+    padding: 10px;
+  }
+  .button-remove-cart{
+    margin-top: 10px;
+  }
