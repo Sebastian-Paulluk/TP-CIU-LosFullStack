@@ -30,7 +30,7 @@ export const Cart = ({ cart, removeFromCart, calculateTotal, total, showCart, se
                         <Button
                           className="button-remove-cart"
                           variant="danger"
-                          onClick={() => removeFromCart(index)}
+                          onClick={() => removeFromCart(producto)}
                         >
                           Eliminar
                         </Button>

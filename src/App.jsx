@@ -27,10 +27,20 @@ function App() {
       }
     });
   };
-  const removeFromCart = (index) => { 
-    const newCart = cart.filter((_, i) => i !== index); 
-    setCart(newCart); 
-  }; 
+  const removeFromCart = (item) => { 
+    setCart(prevCart => {
+      const existingItem = prevCart.find(cartItem => cartItem._id === item._id);
+      if (existingItem.quantity > 1) {
+        return prevCart.map(cartItem =>
+          cartItem._id === item._id
+            ? { ...cartItem, quantity: cartItem.quantity - 1 }
+            : cartItem
+        );
+      } else {
+        return prevCart.filter(cartItem => cartItem._id !== item._id);
+      }
+    });
+  };
 
   const calculateTotal = () => { 
     const newTotal = cart.reduce((sum, item) => sum + item.precio * item.quantity, 0); 

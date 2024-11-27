@@ -9,6 +9,8 @@ export const Header = ({ cart, removeFromCart, calculateTotal, total }) => {
 
   const handleShowCart = () => setShowCart(true);
 
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
   return (
     <div>
       <Navbar bg="dark" variant="dark">
@@ -20,7 +22,7 @@ export const Header = ({ cart, removeFromCart, calculateTotal, total }) => {
           </Nav>
           <Button variant="outline-light" onClick={handleShowCart} className="d-flex align-items-center">
             <i className="bi bi-cart me-2"></i>
-            {cart.length > 0 && <span className="badge bg-danger">{cart.length}</span>}
+            {totalItems > 0 && <span className="badge bg-danger">{totalItems}</span>}
           </Button>
         </Container>
       </Navbar>
