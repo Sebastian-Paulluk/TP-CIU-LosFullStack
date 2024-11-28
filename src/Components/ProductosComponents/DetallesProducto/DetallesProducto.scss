@@ -91,25 +91,43 @@
 
 
 
-  @media (max-width: 920px) {
+  @media (max-width: 820px) {
 
     .detalles-producto {
 
         &__content {
+            display: grid;
+            grid-template-columns: 1fr; 
+            grid-template-rows: auto auto 1fr; 
+            padding-inline: 20px;
 
             &__right-side {
+                order: 1;
 
+                .card-body-photo-container {
+                    margin-bottom: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 300px;
+                    
+                    .card-body-photo{
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
             }
 
             &__left-side {
-
+                order: 2; 
             }
 
-            &__content__left-side {
-
+            &__bottom-side {
+                margin-top: 0;
+                grid-column: span 1; 
+                order: 3; 
             }
         }
     }
-
 }
 
