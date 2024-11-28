@@ -12,7 +12,7 @@ export default function Carrusel() {
                     <a href="https://www.hyperxgaming.com/" target="_blank" rel="noopener noreferrer">
                         <img
                             className="d-block w-100"
-                            src="public\banners\banner-hyperx.jpeg"
+                            src="/banners/banner-hyperx.jpeg"
                             alt="Banner de Hyperx"
                         />
                         <Carousel.Caption>
