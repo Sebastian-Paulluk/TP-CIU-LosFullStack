@@ -8,11 +8,19 @@ import Footer from './Components/Footer/Footer'
 import { Detalles } from './Components/Detalles/Detalles'
 import { ComponentesContainer } from './Components/ComponentesComponents/ComponentesContainer/ComponentesContainer'
 import { FabricanteDetalles } from './Components/FabricantesComponents/FabricanteDetalles/FabricanteDetalles'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function App() {
-  const [cart, setCart] = useState([]); 
-  const [total, setTotal] = useState(0); 
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem('cart');
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+  const [total, setTotal] = useState(0);
+  
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
+
   const addToCart = (item) => { 
     setCart(prevCart => {
       const existingItem = prevCart.find(cartItem => cartItem._id === item._id);
