@@ -6,7 +6,11 @@ export const ProductoCard = ({ producto, addToCart  }) => {
     return (
         <>
            <div className="producto-card" style={{ width: '18rem' }}>
-               <img className="card-img-top" src={producto.pathImg} alt="FotoProducto"></img>
+            
+                <div className='producto-card__img-container'>
+                    <img className="card-img-top" src={producto.pathImg} alt="FotoProducto"></img>
+                </div>
+               
                <div className="card-body">
                    <h5 className="card-title">{producto.nombre}</h5>
                    <p className="card-text">Precio: ${producto.precio.toLocaleString()}</p>

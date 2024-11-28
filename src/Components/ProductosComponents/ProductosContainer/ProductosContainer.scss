@@ -1,15 +1,7 @@
 @use '../../../scss/variables';
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
+
 .productos-section {
+    padding-bottom: 30px;
 
     .productos-section-title {
         text-align: center;
@@ -27,6 +19,18 @@
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
+        gap: 20px;
         animation: slideIn 0.5s ease-out;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
