@@ -1,3 +1,5 @@
+@use './scss/variables';
+
 #root {
   display: grid;
   min-height: 100dvh;
@@ -6,4 +8,5 @@
 
 body {
   overflow-x: hidden;
+  font-family: variables.$font-family;
 }
