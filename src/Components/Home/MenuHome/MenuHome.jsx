@@ -11,7 +11,7 @@ export default function MenuHome() {
             <Container>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto asd">
+                <Nav className="me-auto menu-home-lista" >
                   <Link to="historia" smooth={true} duration={100} className='opcion-menu-home'>Nuestra historia</Link>
                   <Link to="galeria" smooth={true} duration={100} className='opcion-menu-home'>Galeria TecnoMax</Link>
                   <Link to="contacto" smooth={true} duration={100} className='opcion-menu-home'>Contactanos</Link>

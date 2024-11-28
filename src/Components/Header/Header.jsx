@@ -20,8 +20,8 @@ export const Header = ({ cart, removeFromCart, calculateTotal, total }) => {
             <Nav.Link as={Link} to="/productos">Productos</Nav.Link>
             <Nav.Link as={Link} to="/fabricantes">Fabricantes</Nav.Link>
           </Nav>
-          <Button variant="outline-light" onClick={handleShowCart} className="d-flex align-items-center">
-            <i className="bi bi-cart me-2"></i>
+          <Button variant="outline-light" onClick={handleShowCart} className="custom-button">
+            <i className="bi bi-cart"></i>
             {totalItems > 0 && <span className="badge bg-danger">{totalItems}</span>}
           </Button>
         </Container>
