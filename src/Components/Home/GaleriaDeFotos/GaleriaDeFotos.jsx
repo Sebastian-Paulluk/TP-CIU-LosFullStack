@@ -1,5 +1,6 @@
 import React from 'react'
 import { Gallery } from "react-grid-gallery";
+import './Gas.scss'
 
 export default function GaleriaDeFotos() {
     
@@ -9,8 +10,7 @@ export default function GaleriaDeFotos() {
             width: 320,
             height: 174,
             tags: [{value: "Interior", title: "Local"}],
-            alt: "Boats (Jeshu John - designerspics.com)",
-            cursor: "default"
+            alt: "Interior del local y sus estanterias"
         },
         {
             src: "./local-2.jpg",
@@ -95,19 +95,33 @@ export default function GaleriaDeFotos() {
             alt: "Boats (Jeshu John - designerspics.com)"
         },
      ];
+
+     const handleClick = (index) => {
+        if (images[index].onClick) {
+            images[index].onClick();
+        }
+    };
       
     return (
         <Gallery id='galeria'
-            images={images}
-            enableImageSelection={false}
-            onClick={(index) => {
-                if (images[index].onClick) {
-                    images[index].onClick();
-                }
-            }}
-            tileViewportStyle={(image) => ({
-                cursor: image.onClick ? 'pointer' : 'default'
-            })}
+        images={images.map(img => ({
+            ...img,
+            customOverlay: (
+                <div
+                    style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        cursor: img.onClick ? 'pointer' : 'default',
+                        background: img.onClick ? 'rgba(0,0,0,0.1)' : 'transparent',
+                    }}
+                />
+            )
+        }))}
+        enableImageSelection={false}
+        onClick={handleClick}
         />
     )
 }
