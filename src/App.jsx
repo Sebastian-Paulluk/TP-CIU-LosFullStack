@@ -5,80 +5,33 @@ import { FabricantesContainer } from './Components/FabricantesComponents/Fabrica
 import { Header } from './Components/Header/Header'
 import { Home } from './Components/Home/Home'
 import Footer from './Components/Footer/Footer'
-import { Detalles } from './Components/Detalles/Detalles'
+import { DetallesProducto } from './Components/ProductosComponents/DetallesProducto/DetallesProducto'
 import { ComponentesContainer } from './Components/ComponentesComponents/ComponentesContainer/ComponentesContainer'
 import { FabricanteDetalles } from './Components/FabricantesComponents/FabricanteDetalles/FabricanteDetalles'
-import { useEffect, useState } from 'react'
 import { Toaster } from 'react-hot-toast'
+import { CartProvider } from './Contexts/CartContext'
 
 function App() {
-  const [cart, setCart] = useState(() => {
-    const savedCart = localStorage.getItem('cart');
-    return savedCart ? JSON.parse(savedCart) : [];
-  });
-  const [total, setTotal] = useState(0);
-  
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart]);
-
-  const addToCart = (item) => { 
-    setCart(prevCart => {
-      const existingItem = prevCart.find(cartItem => cartItem._id === item._id);
-      if (existingItem) {
-        return prevCart.map(cartItem =>
-          cartItem._id === item._id
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
-            : cartItem
-        );
-      } else {
-        return [...prevCart, { ...item, quantity: 1 }];
-      }
-    });
-  };
-  const removeFromCart = (item) => { 
-    setCart(prevCart => {
-      const existingItem = prevCart.find(cartItem => cartItem._id === item._id);
-      if (existingItem.quantity > 1) {
-        return prevCart.map(cartItem =>
-          cartItem._id === item._id
-            ? { ...cartItem, quantity: cartItem.quantity - 1 }
-            : cartItem
-        );
-      } else {
-        return prevCart.filter(cartItem => cartItem._id !== item._id);
-      }
-    });
-  };
-
-  const calculateTotal = () => { 
-    const newTotal = cart.reduce((sum, item) => sum + item.precio * item.quantity, 0); 
-    setTotal(newTotal); 
-  };
 
   return (
     <>
-      <Toaster />
-      <BrowserRouter >
-      <Header
-          cart={cart}
-          addToCart={addToCart}
-          removeFromCart={removeFromCart}
-          calculateTotal={calculateTotal}
-          total={total}
-        />
-        <Routes >
-          <Route path='/' element={<Home />}/>
-          <Route path='/fabricantes' element={<FabricantesContainer />}/>
-          <Route path='/fabricantes/:id' element={<FabricanteDetalles />}/>
-          <Route path='/productos' element={<ProductosContainer addToCart={addToCart}/>}/>
-          <Route path='/productos/:id' element={<Detalles />} />
-          <Route path='/productos/:id/componentes' element={<ComponentesContainer />} />
-          <Route path='/productos/:id/fabricante' element={<FabricanteDetalles />} />
-          <Route path="*" element={<Home />}/>
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <CartProvider>
+        <Toaster />
+        <BrowserRouter >
+        <Header />
+          <Routes >
+            <Route path='/' element={<Home />}/>
+            <Route path='/fabricantes' element={<FabricantesContainer />}/>
+            <Route path='/fabricantes/:id' element={<FabricanteDetalles />}/>
+            <Route path='/productos' element={<ProductosContainer/>}/>
+            <Route path='/productos/:id' element={<DetallesProducto />} />
+            <Route path='/productos/:id/componentes' element={<ComponentesContainer />} />
+            <Route path='/productos/:id/fabricante' element={<FabricanteDetalles />} />
+            <Route path="*" element={<Home />}/>
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </CartProvider >
     </>
   )
 }

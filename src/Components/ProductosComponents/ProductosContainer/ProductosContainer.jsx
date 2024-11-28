@@ -25,7 +25,7 @@ export const ProductosContainer =({ addToCart })=> {
                         <SectionTitle title={'PRODUCTOS'} />
                         <div className='productos-section-cards'>
                             {productos?.map((producto) => (
-                                    <ProductoCard key={producto._id} producto={producto} addToCart={addToCart} />
+                                    <ProductoCard key={producto._id} producto={producto}/>
                             ))}
                         </div>
                     </>

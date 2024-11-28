@@ -3,10 +3,12 @@ import { Container, Navbar, Nav, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Cart } from '../Cart/Cart';
 import './Header.scss';
+import { useCart } from '../../Contexts/CartContext';
 
-export const Header = ({ cart, removeFromCart, calculateTotal, total }) => {
+export const Header = () => {
   const [showCart, setShowCart] = useState(false);
   const [showTotal, setShowTotal] = useState(false);
+  const { cart, removeFromCart, calculateTotal, total } = useCart();
 
   const handleShowCart = () => setShowCart(true);
 

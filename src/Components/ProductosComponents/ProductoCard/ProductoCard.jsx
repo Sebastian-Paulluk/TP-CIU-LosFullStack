@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import './ProductoCard.scss';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
+import { useCart } from '../../../Contexts/CartContext';
 
-export const ProductoCard = ({ producto, addToCart  }) => {
+export const ProductoCard = ({ producto }) => {
+    const {addToCart} = useCart();
 
     const handleClick =(e)=> {
         e.preventDefault();

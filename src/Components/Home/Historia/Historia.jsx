@@ -25,10 +25,10 @@ export default function Historia() {
             height="315"
             src="https://www.youtube.com/embed/DnnzFUTYXIw?si=pGRuFxg8DLXIyrep"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
             className='video-historia'
             ></iframe>
           </div>
