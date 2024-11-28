@@ -6,42 +6,42 @@ export default function GaleriaDeFotos() {
 
     const localImages = [
         {
-            src: "public/fotos-local/local-1.jpg",
+            src: "/fotos-local/local-1.jpg",
             width: 220,
             height: 174,
             tags: [{value: "Interior comercial", title: "Local"}],
             alt: "Interior del local y sus productos"
         },
         {
-            src: "public/fotos-local/local-2.jpg",
+            src: "/fotos-local/local-2.jpg",
             width: 250,
             height: 212,
             tags: [{value: "Día AMD en nuestro local", title: "Local"}],
             alt: "Dia AMD en nuestra tienda"
         },
         {
-            src: "public/fotos-local/local-3.jpg",
+            src: "/fotos-local/local-3.jpg",
             width: 250,
             height: 300,
             tags: [{value: "Frente azul", title: "Local"}],
             alt: "Vidriera del local con iluminación y productos"
         },
         {
-            src: "public/fotos-local/local-4.jpg",
+            src: "/fotos-local/local-4.jpg",
             width: 200,
             height: 212,
             tags: [{value: "Frente verde", title: "Local"}],
             alt: "Vidriera del local con iluinación y productos"
         },
         {
-            src: "public/fotos-local/local-5.jpg",
+            src: "/fotos-local/local-5.jpg",
             width: 250,
             height: 300,
             tags: [{value: "La entrada sur", title: "Local"}],
             alt: "El otro frente del local con distintos stands"
         },
         {
-            src: "public/fotos-local/local-6.jpg",
+            src: "/fotos-local/local-6.jpg",
             width: 280,
             height: 212,
             tags: [{value: "Interior comercial", title: "Local"}],
@@ -51,7 +51,7 @@ export default function GaleriaDeFotos() {
 
     const standImages = [
         {
-            src: "public/fotos-stands/stand-msi.jpg",
+            src: "/fotos-stands/stand-msi.jpg",
             width: 200,
             height: 212,
             tags: [{value: "MSI", title: "Stand"}],
@@ -62,7 +62,7 @@ export default function GaleriaDeFotos() {
             }
         },
         {
-            src: "public/fotos-stands/stand-razer.jpg",
+            src: "/fotos-stands/stand-razer.jpg",
             width: 320,
             height: 212,
             tags: [{value: "Razer", title: "Stand"}],
@@ -73,7 +73,7 @@ export default function GaleriaDeFotos() {
             }
         },
         {
-            src: "public/fotos-stands/stand-hyperx.jpg",
+            src: "/fotos-stands/stand-hyperx.jpg",
             width: 250,
             height: 212,
             tags: [{value: "Hyperx", title: "Stand"}],
@@ -84,7 +84,7 @@ export default function GaleriaDeFotos() {
             }
         },
         {
-            src: "public/fotos-stands/stand-asus.jpg",
+            src: "/fotos-stands/stand-asus.jpg",
             width: 320,
             height: 212,
             tags: [{value: "Asus", title: "Stand"}],
@@ -95,7 +95,7 @@ export default function GaleriaDeFotos() {
             }
         },
         {
-            src: "public/fotos-stands/stand-coolermaster.jpg",
+            src: "/fotos-stands/stand-coolermaster.jpg",
             width: 380,
             height: 212,
             tags: [{value: "Cooler Master", title: "Stand"}],
