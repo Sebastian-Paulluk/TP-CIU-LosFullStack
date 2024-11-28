@@ -1,5 +1,8 @@
 .menu-home {
-    
+    position: sticky;
+    top: 56px;
+    z-index: 999;
+
     .menu-home-lista {
         gap: 10px;
 

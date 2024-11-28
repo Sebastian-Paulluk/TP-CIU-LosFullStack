@@ -1,7 +1,6 @@
 .producto-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 18rem;
   margin: 1rem;
   border: 1px solid #ddd;
@@ -12,4 +11,18 @@
   cursor: pointer;
   text-decoration: none;
   color: inherit;
+  transition: border-color 0.3s ease;
+
+  .card-body {
+    .button-group{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+
+  &:hover{
+    border-color: black;
+  }
 }
