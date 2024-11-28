@@ -4,6 +4,7 @@ import { getComponentes } from "../../../services/api"
 import { useParams } from 'react-router-dom';
 import { ComponenteCard } from '../ComponenteCard/ComponenteCard';
 import { LoadingScreen } from '../../LoadingScreen/LoadingScreen';
+import { SectionTitle } from '../../SectionTitle/SectionTitle';
 
 export const ComponentesContainer =()=> {
     const [componentes , setComponentes] = useState([]);
@@ -27,7 +28,7 @@ export const ComponentesContainer =()=> {
             {
                 componentes.length > 0 ? (
                     <div className="componentes-section">
-                        <h3 className='componentes-section-title'>Componentes de {nombreProducto}</h3>
+                        <SectionTitle title={`Componentes de ${nombreProducto}`} />
                         <div className='componentes-section-cards'>
                             {componentes.map(com => (
                                 <ComponenteCard key={com._id} componente={com} />

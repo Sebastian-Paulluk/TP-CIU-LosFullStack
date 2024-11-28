@@ -1,37 +1,28 @@
 @use '../../../scss/variables';
+
+.componentes-section {
+    padding-bottom: 100px;
+
+    .componentes-section-cards{
+        max-width: 1300px;
+        margin: auto;
+        padding-inline: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        animation: slideIn 0.5s ease-out;
+    }
+}
+
+
 @keyframes slideIn {
     from {
-        transform: translateX(100%);
+        transform: translateX(100px);
         opacity: 0;
     }
     to {
         transform: translateX(0);
         opacity: 1;
-    }
-}
-.componentes-section {
-    &__cards {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        animation: slideIn 0.5s ease-out;
-    }
-    .componentes-section-title {
-        text-align: center;
-        font-size: 2rem;
-        margin: 20px auto;
-        padding: 10px 20px;
-        border: 1px solid rgb(129, 129, 129);
-        border-radius: 10px;
-        background-color: #f8f9fa;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        color: #333;
-        max-width: 400px;
-    }
-    .componentes-section-cards{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        animation: slideIn 0.5s ease-out;
     }
 }
