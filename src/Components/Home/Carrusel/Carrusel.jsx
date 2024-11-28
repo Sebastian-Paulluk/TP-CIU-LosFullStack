@@ -12,7 +12,7 @@ export default function Carrusel() {
                     <a href="https://www.hyperxgaming.com/" target="_blank" rel="noopener noreferrer">
                         <img
                             className="d-block w-100"
-                            src="/banner-hyperx.jpeg"
+                            src="public\banners\banner-hyperx.jpeg"
                             alt="Banner de Hyperx"
                         />
                         <Carousel.Caption>
@@ -31,7 +31,7 @@ export default function Carrusel() {
                     <a href="https://www.corsair.com/" target="_blank" rel="noopener noreferrer">
                         <img
                             className="d-block w-100"
-                            src="/banner-corsair.jpeg"
+                            src="public\banners\banner-corsair.jpeg"
                             alt="Banner de Corsair"
                         />
                         <Carousel.Caption>
@@ -50,7 +50,7 @@ export default function Carrusel() {
                     <a href="https://www.razer.com/" target="_blank" rel="noopener noreferrer">
                         <img
                             className="d-block w-100"
-                            src="/banner-razer.jpeg"
+                            src="public\banners\banner-razer.jpeg"
                             alt="Banner de Razer"
                         />
                         <Carousel.Caption>
@@ -69,7 +69,7 @@ export default function Carrusel() {
                     <a href="https://www.logitech.com/" target="_blank" rel="noopener noreferrer">
                         <img
                             className="d-block w-100"
-                            src="/banner-logitech.jpeg"
+                            src="public\banners\banner-logitech.jpeg"
                             alt="Banner de Logitech"
                         />
                         <Carousel.Caption>
