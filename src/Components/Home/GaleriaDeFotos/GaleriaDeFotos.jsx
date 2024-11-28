@@ -9,7 +9,8 @@ export default function GaleriaDeFotos() {
             width: 320,
             height: 174,
             tags: [{value: "Interior", title: "Local"}],
-            alt: "Boats (Jeshu John - designerspics.com)"
+            alt: "Boats (Jeshu John - designerspics.com)",
+            cursor: "default"
         },
         {
             src: "./local-2.jpg",
@@ -104,6 +105,9 @@ export default function GaleriaDeFotos() {
                     images[index].onClick();
                 }
             }}
+            tileViewportStyle={(image) => ({
+                cursor: image.onClick ? 'pointer' : 'default'
+            })}
         />
     )
 }
