@@ -1,0 +1,15 @@
+.menu-home {
+
+    .opcion-menu-home {
+        color: white;
+        text-decoration: none;
+        margin-right: 15px; 
+        font-size: 16px;
+        transition: color 0.3s;
+        cursor: pointer;
+    }
+    
+    .opcion-menu-home:hover {
+        color: #ff5733;
+    }
+}
