@@ -30,9 +30,17 @@ export const ComponentesContainer =()=> {
                     <div className="componentes-section">
                         <SectionTitle title={`Componentes de ${nombreProducto}`} />
                         <div className='componentes-section-cards'>
-                            {componentes.map(com => (
-                                <ComponenteCard key={com._id} componente={com} />
-                            ))}
+                            {componentes.map((com, index) => {
+                                const mountingDelay = (index + 1) * 0.09;
+
+                                return (
+                                    <ComponenteCard
+                                        key={com._id}
+                                        componente={com}
+                                        mountingDelay={mountingDelay}
+                                    />
+                                )  
+                            })}
                         </div>
                     </div>
                 ) : (

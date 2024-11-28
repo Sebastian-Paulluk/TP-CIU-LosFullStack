@@ -1,9 +1,11 @@
+import { useMountingAnimation } from '../../../Hooks/useMountingAnimation';
 import './ComponenteCard.scss';
 
-export const ComponenteCard = ({ componente }) => {
+export const ComponenteCard = ({ componente, mountingDelay }) => {
+    const visibility = useMountingAnimation(mountingDelay);
     
     return (
-        <div className="componente-card">
+        <div className={`componente-card ${visibility ? '' : 'hidden'}`}>
             <div className="card-body">
                 <div className='card-title'>
                     <p className='line'>-</p>
