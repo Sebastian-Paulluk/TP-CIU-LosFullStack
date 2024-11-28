@@ -1,6 +1,6 @@
 import React from 'react'
-import { Gallery } from "react-grid-gallery";
 import './GaleriaDeFotos.scss'
+import { Gallery } from "react-grid-gallery";
 
 export default function GaleriaDeFotos() {
 

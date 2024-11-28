@@ -5,7 +5,7 @@ import { ProductoCard } from '../ProductoCard/ProductoCard';
 import { LoadingScreen } from '../../LoadingScreen/LoadingScreen';
 import { SectionTitle } from '../../SectionTitle/SectionTitle';
 
-export const ProductosContainer =({ addToCart })=> {
+export const ProductosContainer =()=> {
     const [productos , setProductos] = useState([]);
 
     useEffect(()=>{

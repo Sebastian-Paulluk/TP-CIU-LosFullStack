@@ -1,5 +1,5 @@
-import { Link, useParams } from 'react-router-dom';
 import './DetallesProducto.scss';
+import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getProducto } from '../../../services/api';
 import { LoadingScreen } from '../../LoadingScreen/LoadingScreen';
