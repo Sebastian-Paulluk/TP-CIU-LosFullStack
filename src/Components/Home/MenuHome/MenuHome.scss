@@ -1,0 +1,29 @@
+.menu-home {
+
+    .menu-home-lista {
+        gap: 10px;
+
+        .opcion-menu-home {
+            color: rgb(160, 160, 160);
+            text-decoration: none;
+            margin-right: 15px; 
+            font-size: 16px;
+            transition: color 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                color: #ff5733;
+            }
+        }
+    }
+    
+    .navbar-collapse {
+        transition: padding 0.3s ease, height 0.4s ease;
+        color: transparent;
+
+        &.show {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+}
