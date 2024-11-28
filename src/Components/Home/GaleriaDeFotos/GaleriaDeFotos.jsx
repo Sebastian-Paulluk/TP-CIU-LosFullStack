@@ -1,5 +1,6 @@
 import React from 'react'
 import { Gallery } from "react-grid-gallery";
+import './GaleriaDeFotos.scss'
 
 export default function GaleriaDeFotos() {
     
@@ -102,25 +103,27 @@ export default function GaleriaDeFotos() {
     };
       
     return (
-        <Gallery id='galeria'
-        images={images.map(img => ({
-            ...img,
-            customOverlay: (
-                <div
-                    style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
-                        cursor: img.onClick ? 'pointer' : 'default',
-                        background: img.onClick ? 'rgba(0,0,0,0.1)' : 'transparent',
-                    }}
-                />
-            )
-        }))}
-        enableImageSelection={false}
-        onClick={handleClick}
-        />
+        <div className='galeria-container' id='galeria'>
+            <Gallery
+                images={images.map(img => ({
+                ...img,
+                customOverlay: (
+                    <div
+                        style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%',
+                            cursor: img.onClick ? 'pointer' : 'default',
+                            background: img.onClick ? 'rgba(0,0,0,0.1)' : 'transparent',
+                        }}
+                    />
+                )
+            }))}
+            enableImageSelection={false}
+            onClick={handleClick}
+            />
+        </div>
     )
 }

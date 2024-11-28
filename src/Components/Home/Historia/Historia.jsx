@@ -1,9 +1,10 @@
 import React from 'react'
+import './Historia.scss'
 
 export default function Historia() {
   return (
-    <div className='historia'>
-        <h2 id='historia'>Quiénes Somos</h2>
+    <div className='historia' id='historia'>
+        <h2>Quiénes Somos</h2>
         <h3>Nuestra Historia</h3>
         <p>
           En el año 2018, en Buenos Aires, nació TecnoMax, una empresa familiar con la pasión por la tecnología y un sueño claro: ofrecer a los entusiastas 
@@ -16,7 +17,18 @@ export default function Historia() {
           topamos con un video de una empresa de hardware española que le había armado un PC <b>bestial</b> al Rubius. Acá el video:
         </p>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/DnnzFUTYXIw?si=pGRuFxg8DLXIyrep" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/DnnzFUTYXIw?si=pGRuFxg8DLXIyrep"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          className='video-historia'
+        >
+        </iframe>
         
         <p>  
           Cuando vimos el video, no entendimos mucho de lo que hablaban, pero nos fascinó 

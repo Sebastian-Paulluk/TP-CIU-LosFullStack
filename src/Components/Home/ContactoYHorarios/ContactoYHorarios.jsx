@@ -1,8 +1,9 @@
 import React from 'react'
+import './ContactoYHorarios.scss'
 
 export default function ContactoYHorarios() {
   return (
-    <div id='contacto'>
+    <div id='contacto' className='contacto'>
         <h2>Nos podés contactar por los siguientes medios:</h2>
         <p>Por teléfono: 011-1234-5678</p>
         <p>Por correo electrónico: correoinventado@gmail.com</p>
