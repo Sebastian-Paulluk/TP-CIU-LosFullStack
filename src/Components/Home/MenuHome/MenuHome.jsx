@@ -13,6 +13,7 @@ export default function MenuHome() {
                     <Nav.Link as={Link} to="/">Nuestra historia</Nav.Link>
                     <Nav.Link as={Link} to="/">Galeria TecnoMax</Nav.Link>
                     <Nav.Link as={Link} to="/">Contactanos</Nav.Link>
+                    <Nav.Link as={Link} to="/">Donde estamos</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>
