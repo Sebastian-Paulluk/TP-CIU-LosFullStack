@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { getFabricantes } from "../../../services/api"
 import { FabricanteCard } from '../FabricanteCard/FabricanteCard';
 import { LoadingScreen } from '../../LoadingScreen/LoadingScreen';
+import { SectionTitle } from '../../SectionTitle/SectionTitle';
 
 export const FabricantesContainer =()=> {
     const [fabricantes , setFabricantes] = useState([]);
@@ -21,7 +22,7 @@ export const FabricantesContainer =()=> {
             {
                 fabricantes.length > 0 ? (
                     <>
-                        <h3 className='fabricantes-section__title'>Fabricantes</h3>
+                        <SectionTitle title={'FABRICANTES'} />
                         <div className='fabricantes-section__cards'>
                             {fabricantes?.map((fab) => (
                                     <FabricanteCard key={fab._id} fabricante={fab} />

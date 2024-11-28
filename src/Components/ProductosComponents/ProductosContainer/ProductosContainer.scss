@@ -1,36 +1,16 @@
 @use '../../../scss/variables';
 
 .productos-section {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
+    border: 1px solid red;
 
-    .productos-section-title {
-        text-align: center;
-        font-size: 2rem;
-        margin: 20px auto;
-        padding: 10px 20px;
-        border: 1px solid rgb(129, 129, 129);
-        border-radius: 10px;
-        background-color: #f8f9fa;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        color: #333;
-        max-width: 400px;
-    }
     .productos-section-cards{
+        max-width: 1300px;
+        margin: auto;
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
+        padding-inline: 20px;
         gap: 20px;
-        animation: slideIn 0.5s ease-out;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
     }
 }

@@ -9,6 +9,7 @@ import { Detalles } from './Components/Detalles/Detalles'
 import { ComponentesContainer } from './Components/ComponentesComponents/ComponentesContainer/ComponentesContainer'
 import { FabricanteDetalles } from './Components/FabricantesComponents/FabricanteDetalles/FabricanteDetalles'
 import { useEffect, useState } from 'react'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   const [cart, setCart] = useState(() => {
@@ -54,8 +55,10 @@ function App() {
     const newTotal = cart.reduce((sum, item) => sum + item.precio * item.quantity, 0); 
     setTotal(newTotal); 
   };
+
   return (
     <>
+      <Toaster />
       <BrowserRouter >
       <Header
           cart={cart}
