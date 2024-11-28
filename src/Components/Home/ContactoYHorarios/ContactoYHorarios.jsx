@@ -10,7 +10,7 @@ export default function ContactoYHorarios() {
         <div className='contacto__content__left-side'>
           <h4>Nos podés contactar por los siguientes medios:</h4>
           <p>Por teléfono: 011-1234-5678</p>
-          <p>Por correo electrónico: correoinventado@gmail.com</p>
+          <p>Por correo electrónico: tecnomax@gmail.com</p>
           <p>Por WhatsApp: 011-1234-5678</p>
           <p>Por redes sociales: @tecnomax</p>
         </div>

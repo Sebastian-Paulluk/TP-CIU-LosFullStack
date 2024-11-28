@@ -12,8 +12,8 @@ export const Ubicacion =()=> {
           <h4>¿Dónde Estamos?</h4>
           <p>
               Nuestra tienda se encuentra ubicada en el barrio de Palermo, en la Ciudad Autónoma de Buenos Aires, Argentina. 
-              Contamos con un local amplio y moderno, equipado con la última tecnología y un equipo de profesionales altamente 
-              capacitados para brindarte la mejor atención.
+              Contamos con un local amplio y moderno, con doble entrada/salida, equipado con la última tecnología y un equipo 
+              de profesionales altamente capacitados para brindarte la mejor atención.
           </p> 
         </div>
 

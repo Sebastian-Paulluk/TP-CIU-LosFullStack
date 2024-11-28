@@ -2,4 +2,134 @@
     padding: 20px;
     max-width: 1300px;
     margin: auto;
+    border-top: 1px solid rgb(199, 199, 199);
+    border-bottom: 1px solid rgb(199, 199, 199);
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .galeria-subtitle {
+        text-align: center;
+        margin: 40px 0 20px 0;
+        color: #333;
+        font-size: 1.8rem;
+        
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    .galeria-section {
+        &.first {
+            .ReactGridGallery_tile {
+                position: relative;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                
+                &:hover {
+                    transform: translateY(-5px);
+                    z-index: 1;
+
+                    .ReactGridGallery_tile-viewport {
+                        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                    }
+                }
+
+                .ReactGridGallery_tile-viewport {
+                    border-radius: 8px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                }
+            }
+        }
+    }
+
+    .ReactGridGallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1100px;
+        margin: 0 auto;
+
+        .ReactGridGallery_tile-viewport {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        // Efectos solo para la primera galería
+        &:first-of-type {
+            .ReactGridGallery_tile {
+                position: relative;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                
+                &:hover {
+                    transform: translateY(-5px);
+                    z-index: 1;
+
+                    .ReactGridGallery_tile-viewport {
+                        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .ReactGridGallery_tile-viewport {
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                    transition: box-shadow 0.3s ease;
+                    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    }
+                }
+            }
+        }
+
+        // Efectos solo para la segunda galería
+        &:last-of-type {
+            .ReactGridGallery_tile {
+                position: relative;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                
+                &:hover {
+                    transform: translateY(-5px);
+                    z-index: 1;
+
+                    .ReactGridGallery_tile-viewport {
+                        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .ReactGridGallery_tile-viewport {
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                    transition: box-shadow 0.3s ease;
+                    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    }
+                }
+            }
+        }
+    }
+
+    .ReactGridGallery_tile {
+        margin: 2px;
+    }
 }

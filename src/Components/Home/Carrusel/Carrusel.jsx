@@ -6,7 +6,7 @@ export default function Carrusel() {
         <Carousel>
             <Carousel.Item>
                 <OverlayTrigger
-                placement="top"
+                placement="bottom-end"
                 overlay={<Tooltip id="tooltip-hyperx">Visita Hyperx</Tooltip>}
                 >
                     <a href="https://www.hyperxgaming.com/" target="_blank" rel="noopener noreferrer">
@@ -25,7 +25,7 @@ export default function Carrusel() {
 
             <Carousel.Item>
                 <OverlayTrigger
-                placement="top"
+                placement="bottom-end"
                 overlay={<Tooltip id="tooltip-corsair">Visita Corsair</Tooltip>}
                 >
                     <a href="https://www.corsair.com/" target="_blank" rel="noopener noreferrer">
@@ -44,7 +44,7 @@ export default function Carrusel() {
 
             <Carousel.Item>
                 <OverlayTrigger
-                placement="top"
+                placement="bottom-end"
                 overlay={<Tooltip id="tooltip-razer">Visita Razer</Tooltip>}
                 >
                     <a href="https://www.razer.com/" target="_blank" rel="noopener noreferrer">
@@ -63,7 +63,7 @@ export default function Carrusel() {
 
             <Carousel.Item>
                 <OverlayTrigger
-                placement="top"
+                placement="bottom-end"
                 overlay={<Tooltip id="tooltip-logitech">Visita Logitech</Tooltip>}
                 >
                     <a href="https://www.logitech.com/" target="_blank" rel="noopener noreferrer">
